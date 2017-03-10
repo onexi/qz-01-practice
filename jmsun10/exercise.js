@@ -114,9 +114,9 @@ exercise.seven = function(n){
     var myarr = [];
     for (var i=0;i<n;i++){
         if(i%2===0){
-            myarr.push(1);
+            myarr.push(0);
         }
-        else myarr.push(0);
+        else myarr.push(1);
     }
     return myarr;
 };
