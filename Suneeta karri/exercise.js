@@ -142,7 +142,7 @@ exercise.nine = function(func){
     return func()*func();
 };
 
-exercise.ten = function(){
+exercise.ten = function(a,b){
     // ----------------------------------------
     //   QUESTION 10
     //   Return a function that is capable of accepting two
@@ -153,7 +153,7 @@ exercise.ten = function(){
     //   function(a, b) { return /*  do something  */ }
     // ----------------------------------------
 return function(a,b){
-        return a+b;
+        return a*b;
     };
 };
 
