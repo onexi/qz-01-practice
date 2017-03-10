@@ -152,9 +152,7 @@ exercise.ten = function(){
     //   For this, the return value would be of the form
     //   function(a, b) { return /*  do something  */ }
     // ----------------------------------------
-    return function(a,b){
-        return a+b;
+    return 'Error: Question 10 not implemented';
 };
-
 
 module.exports = exercise;
