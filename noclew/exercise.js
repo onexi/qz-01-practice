@@ -101,7 +101,7 @@ exercise.seven = function (n) {
     // ----------------------------------------
     res = [];
     for (var i = 0; i < n; i++) {
-        res.push( i%2==0? 1 : 0 );
+        res.push( i%2==0? 0 : 1 );
     }
     return res;
 };
@@ -116,11 +116,9 @@ exercise.eight = function (str) {
     //
     //   For str = '1234', return 10
     // ----------------------------------------
-    var res = 0;
-    str.split('').forEach(function (el, i) {
-        res += Number(el);
-    });
-    return res;
+    return str.split('').reduce(function (p, c) {
+        return p + Number(c);
+    }, 0);
 };
 
 exercise.nine = function (func) {
