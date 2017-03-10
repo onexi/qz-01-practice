@@ -112,7 +112,7 @@ exercise.seven = function(n){
     // ----------------------------------------
     var arr = [];
 
-    for (var step = 1; step < n+1; step++){
+    for (var step = 0; step < n; step++){
         arr.push(step%2);
     };
     return arr;
