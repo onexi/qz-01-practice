@@ -22,7 +22,7 @@ exercise.two = function(arr){
     //
     //   For an input arr = [9, 3, 4], the return value should be 4
     // ----------------------------------------
-    return arr.slice(-1);
+    return arr.slice(-1)[0];
 };
 
 exercise.three = function(str){
@@ -99,10 +99,10 @@ exercise.seven = function(n){
     //   Return a new array of length n such that each element is a 1
     //   for the odd indexes and 0 for the even indexes
     //
-    //   For an input n = 4, the return value would be [1, 0, 1, 0]
+    //   For an input n = 4, the return value would be [0, 1, 0, 1]
     // ----------------------------------------
     var arr = [];
-    for (i = 1; i < n+1; i++){
+    for (i = 0; i < n; i++){
         if (i % 2 == 0){
             arr.push(0)
         } else {
