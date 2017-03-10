@@ -11,7 +11,8 @@ exercise.one = function(a, b){
     //   For an input of a = 2 and b = 3, the returned object
     //   should look like {'sum': 5}
     // ----------------------------------------
-    return 'Error: Question 01 not implemented';
+    return {'sum': a+b};
+    //return 'Error: Question 01 not implemented';
 };
 
 exercise.two = function(arr){
@@ -22,7 +23,8 @@ exercise.two = function(arr){
     //
     //   For an input arr = [9, 3, 4], the return value should be 4
     // ----------------------------------------
-    return 'Error: Question 02 not implemented';
+    //alt: (not as desirable because modifies the array) return arr.pop();
+    return arr[arr.length-1];
 };
 
 exercise.three = function(str){
@@ -35,7 +37,24 @@ exercise.three = function(str){
     //   For an input of str = "apple", the return value should
     //   be "a_p_p_l_e"
     // ----------------------------------------
-    return 'Error: Question 03 not implemented';
+    var newstr = '';
+    for (var i = 0, len = str.length; i < len; i++){
+        if (i == len-1){
+            newstr += str[i];
+        } else {
+            newstr += str[i] + '_';
+        };
+    };
+    return newstr;
+
+    //alt: return str.split("").join("_";)
+    // alt: 
+    // var newstr = '';
+    // for (var i = 0, len = str.length; i < len; i++){
+    //     newstr += str[i] + '_';
+    // }
+    // newstr += str[str.length-1];
+    // return newstr;
 };
 
 exercise.four = function(arr){
@@ -47,7 +66,10 @@ exercise.four = function(arr){
     //
     //   For an input arr = [2, 4, 6], the return should be [4, 16, 36]
     // ----------------------------------------
-    return 'Error: Question 04 not implemented';
+    var squareArr = arr.map(function(element){
+        return element*element;
+    });
+    return squareArr;
 };
 
 exercise.five = function(obj){
