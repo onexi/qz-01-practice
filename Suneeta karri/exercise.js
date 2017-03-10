@@ -98,9 +98,12 @@ exercise.six = function(arr){
 };
 
 exercise.seven = function(n){
-    
-    myArr.push(i%2);
-}
+    var myArr = [];
+    for (var i=0; i < n; i++) {
+      myArr.push(i%2); 
+    };
+    return myArr;
+    // return myArr;
 
     // ----------------------------------------
     //   QUESTION 07
@@ -108,15 +111,14 @@ exercise.seven = function(n){
     //   Return a new array of length n such that each element is a 1
     //   for the odd indexes and 0 for the even indexes
     //
-    //   For an input n = 4, the return value would be [0, 1 , 0 , 1]
+    //   For an input n = 4, the return value would be [1, 0, 1, 0]
     // ----------------------------------------
-    return myArr;
-};
+    };
 
 exercise.eight = function(str){
     var numbers = str.split("");
     return numbers.reduce(function(prev,cur){return Number(prev)+Number(cur);},0);
-    }
+    };
     // ----------------------------------------
     //   QUESTION 08
     //   The function takes in str which is a string. This string
@@ -126,7 +128,6 @@ exercise.eight = function(str){
     //
     //   For str = '1234', return 10
     // ----------------------------------------
-};
 
 exercise.nine = function(func){
     // ----------------------------------------
@@ -141,7 +142,7 @@ exercise.nine = function(func){
     return func()*func();
 };
 
-exercise.ten = function(){
+exercise.ten = function(a,b){
     // ----------------------------------------
     //   QUESTION 10
     //   Return a function that is capable of accepting two
@@ -151,9 +152,9 @@ exercise.ten = function(){
     //   For this, the return value would be of the form
     //   function(a, b) { return /*  do something  */ }
     // ----------------------------------------
-    return function(a,b){
-        return a+b;
+return function(a,b){
+        return a*b;
+    };
 };
-
 
 module.exports = exercise;
