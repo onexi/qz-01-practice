@@ -98,8 +98,7 @@ exercise.six = function(arr){
 };
 
 exercise.seven = function(n){
-    var myArr = { 
-
+    
     myArr.push(i%2);
 }
 
@@ -109,7 +108,7 @@ exercise.seven = function(n){
     //   Return a new array of length n such that each element is a 1
     //   for the odd indexes and 0 for the even indexes
     //
-    //   For an input n = 4, the return value would be [1, 0, 1, 0]
+    //   For an input n = 4, the return value would be [0, 1 , 0 , 1]
     // ----------------------------------------
     return myArr;
 };
