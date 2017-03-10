@@ -128,7 +128,12 @@ exercise.eight = function(str){
     //
     //   For str = '1234', return 10
     // ----------------------------------------
-    return 'Error: Question 08 not implemented';
+    var sum = 0;
+    var i = str.length;
+    while (i--){
+        sum += Number(str[i]);
+    };
+    return sum;
 };
 
 exercise.nine = function(func){
