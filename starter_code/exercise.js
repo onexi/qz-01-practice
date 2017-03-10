@@ -11,7 +11,8 @@ exercise.one = function(a, b){
     //   For an input of a = 2 and b = 3, the returned object
     //   should look like {'sum': 5}
     // ----------------------------------------
-    return 'Error: Question 01 not implemented';
+    return {'sum': a+b};
+    //return 'Error: Question 01 not implemented';
 };
 
 exercise.two = function(arr){
@@ -22,7 +23,8 @@ exercise.two = function(arr){
     //
     //   For an input arr = [9, 3, 4], the return value should be 4
     // ----------------------------------------
-    return 'Error: Question 02 not implemented';
+    //alt: (not as desirable because modifies the array) return arr.pop();
+    return arr[arr.length-1];
 };
 
 exercise.three = function(str){
@@ -35,7 +37,24 @@ exercise.three = function(str){
     //   For an input of str = "apple", the return value should
     //   be "a_p_p_l_e"
     // ----------------------------------------
-    return 'Error: Question 03 not implemented';
+    var newstr = '';
+    for (var i = 0, len = str.length; i < len; i++){
+        if (i == len-1){
+            newstr += str[i];
+        } else {
+            newstr += str[i] + '_';
+        };
+    };
+    return newstr;
+
+    //alt: return str.split("").join("_";)
+    // alt: 
+    // var newstr = '';
+    // for (var i = 0, len = str.length; i < len; i++){
+    //     newstr += str[i] + '_';
+    // }
+    // newstr += str[str.length-1];
+    // return newstr;
 };
 
 exercise.four = function(arr){
@@ -47,7 +66,10 @@ exercise.four = function(arr){
     //
     //   For an input arr = [2, 4, 6], the return should be [4, 16, 36]
     // ----------------------------------------
-    return 'Error: Question 04 not implemented';
+    var squareArr = arr.map(function(element){
+        return element*element;
+    });
+    return squareArr;
 };
 
 exercise.five = function(obj){
@@ -62,7 +84,8 @@ exercise.five = function(obj){
     //   For an input obj = {'first_name': 'John', 'last_name': 'Doe'},
     //   the return value should be 'John Doe'
     // ----------------------------------------
-    return 'Error: Question 05 not implemented';
+    var name = obj['first_name'] + ' ' + obj['last_name'];
+    return name;
 };
 
 exercise.six = function(arr){
@@ -73,8 +96,10 @@ exercise.six = function(arr){
     //
     //   For an input arr = [1, 4, 6, 9], the return value should be 2
     // ----------------------------------------
-    return 'Error: Question 06 not implemented';
+    return arr.filter(function(n){
+        return n%2 === 0;}).length;
 };
+
 
 exercise.seven = function(n){
     // ----------------------------------------
@@ -85,7 +110,12 @@ exercise.seven = function(n){
     //
     //   For an input n = 4, the return value would be [1, 0, 1, 0]
     // ----------------------------------------
-    return 'Error: Question 07 not implemented';
+    var arr = [];
+
+    for (var step = 0; step < n; step++){
+        arr.push(step%2);
+    };
+    return arr;
 };
 
 exercise.eight = function(str){
@@ -98,7 +128,17 @@ exercise.eight = function(str){
     //
     //   For str = '1234', return 10
     // ----------------------------------------
-    return 'Error: Question 08 not implemented';
+    var sum = 0;
+    var i = str.length;
+    while (i--){
+        sum += Number(str[i]);
+    };
+    return sum;
+
+    ////ALT
+    // var numbers = str.split("");
+    // return numbers.reduce(function(prev,cur){return Number(prev)+Number(cur);},0);
+    // }
 };
 
 exercise.nine = function(func){
@@ -111,10 +151,10 @@ exercise.nine = function(func){
     //
     //   For an obtained value of 5 on executing func, return 25
     // ----------------------------------------
-    return 'Error: Question 09 not implemented';
+    return func()*func();
 };
 
-exercise.ten = function(){
+exercise.ten = function(a,b){
     // ----------------------------------------
     //   QUESTION 10
     //   Return a function that is capable of accepting two
@@ -124,7 +164,9 @@ exercise.ten = function(){
     //   For this, the return value would be of the form
     //   function(a, b) { return /*  do something  */ }
     // ----------------------------------------
-    return 'Error: Question 10 not implemented';
+    return function(a,b){
+        return a*b;
+    };
 };
 
 module.exports = exercise;
