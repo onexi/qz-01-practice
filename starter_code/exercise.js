@@ -84,7 +84,8 @@ exercise.five = function(obj){
     //   For an input obj = {'first_name': 'John', 'last_name': 'Doe'},
     //   the return value should be 'John Doe'
     // ----------------------------------------
-    return 'Error: Question 05 not implemented';
+    var name = obj['first_name'] + ' ' + obj['last_name'];
+    return name;
 };
 
 exercise.six = function(arr){
@@ -95,8 +96,10 @@ exercise.six = function(arr){
     //
     //   For an input arr = [1, 4, 6, 9], the return value should be 2
     // ----------------------------------------
-    return 'Error: Question 06 not implemented';
+    return arr.filter(function(n){
+        return n%2 === 0;}).length;
 };
+
 
 exercise.seven = function(n){
     // ----------------------------------------
@@ -107,7 +110,12 @@ exercise.seven = function(n){
     //
     //   For an input n = 4, the return value would be [1, 0, 1, 0]
     // ----------------------------------------
-    return 'Error: Question 07 not implemented';
+    var arr = [];
+
+    for (var step = 1; step < n+1; step++){
+        arr.push(step%2);
+    };
+    return arr;
 };
 
 exercise.eight = function(str){
