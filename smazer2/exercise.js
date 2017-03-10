@@ -64,12 +64,12 @@ exercise.four = function(arr){
     //
     //   For an input arr = [2, 4, 6], the return should be [4, 16, 36]
     // ----------------------------------------
-    
+   var newArr=[]; 
     for(var i = 0; i<arr.length; i++)
     {
-        arr[i]=arr[i]*arr[i];
+        newArr[i]=arr[i]*arr[i];
     }
-    return arr;
+    return newArr;
 };
 
 exercise.five = function(obj){
@@ -118,9 +118,9 @@ exercise.seven = function(n){
     for(var i =0; i<n; i++)
     {
         if(i%2==0)
-            array[i]=1;
-        else
             array[i]=0;
+        else
+            array[i]=1;
     }
     return array;
 };
