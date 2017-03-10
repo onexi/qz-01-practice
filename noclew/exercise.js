@@ -101,7 +101,7 @@ exercise.seven = function (n) {
     // ----------------------------------------
     res = [];
     for (var i = 0; i < n; i++) {
-        res.push((i + 1) % 2);
+        res.push( i%2==0? 1 : 0 );
     }
     return res;
 };
