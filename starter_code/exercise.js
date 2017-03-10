@@ -134,6 +134,11 @@ exercise.eight = function(str){
         sum += Number(str[i]);
     };
     return sum;
+
+    ////ALT
+    // var numbers = str.split("");
+    // return numbers.reduce(function(prev,cur){return Number(prev)+Number(cur);},0);
+    // }
 };
 
 exercise.nine = function(func){
@@ -146,7 +151,7 @@ exercise.nine = function(func){
     //
     //   For an obtained value of 5 on executing func, return 25
     // ----------------------------------------
-    return 'Error: Question 09 not implemented';
+    return func()*func();
 };
 
 exercise.ten = function(){
