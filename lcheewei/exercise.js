@@ -107,8 +107,8 @@ exercise.seven = function(n){
     var arr = [];
 
     for(var i=0; i<=n-1; i++){
-        if (i%2==0) arr[i]=1;
-        else arr[i]=0;
+        if (i%2==0) arr[i]=0;
+        else arr[i]=1;
     }
    
     return arr;
@@ -125,11 +125,11 @@ exercise.eight = function(str){
     //   For str = '1234', return 10
     // ----------------------------------------
     
-
-    var num = str.reduce (function (prev, curr){
+    var num1 = str.split('');
+    var num2 = num1.reduce (function (prev, curr){
         return parseInt(prev)+parseInt(curr);
     }, 0);
-    return num;
+    return num2;
 
 /*
     var num=0;
