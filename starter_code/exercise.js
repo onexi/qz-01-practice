@@ -119,7 +119,7 @@ exercise.seven = function (n) {
             }
         }*/
     //solution2
-    for (var i = 1; i < n + 1; i++) {
+    for (var i = 0; i < n; i++) {
         arr.push(i % 2);
     }
     return arr;
