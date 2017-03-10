@@ -96,14 +96,14 @@ exercise.seven = function(n){
     //   Return a new array of length n such that each element is a 1
     //   for the odd indexes and 0 for the even indexes
     //
-    //   For an input n = 4, the return value would be [1, 0, 1, 0]
+    //   For an input n = 4, the return value would be [0, 1, 0, 1]
     // ----------------------------------------
     var arr = [];
     for(var i = 0; i < n; i += 2){
-        arr[i] = 1;
+        arr[i] = 0;
     }
     for(var j = 1; j < n; j += 2){
-        arr[j] = 0;
+        arr[j] = 1;
     }
     return arr;
 };
