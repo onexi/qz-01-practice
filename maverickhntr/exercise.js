@@ -112,14 +112,8 @@ exercise.seven = function(n){
     
     var newArray = [];
     for(var i =0; i < n; i++){
-        if (i % 2 == 0){
-            newArray.push(1);
-        }
-        else {
-            newArray.push(0);
-        }
-        //or just newArray.push(i%2);
-    }
+         newArray.push(i%2);
+    };
     return newArray;
 };
 
