@@ -1,6 +1,6 @@
 var exercise = {};
 
-exercise.one = function(a, b){
+exercise.one = function (a, b) {
 
     // ----------------------------------------
     //   QUESTION 01
@@ -11,10 +11,11 @@ exercise.one = function(a, b){
     //   For an input of a = 2 and b = 3, the returned object
     //   should look like {'sum': 5}
     // ----------------------------------------
-    return 'Error: Question 01 not implemented';
+    return { 'sum': a + b };
+
 };
 
-exercise.two = function(arr){
+exercise.two = function (arr) {
     // ----------------------------------------
     //   QUESTION 02
     //   The function takes in arr which is an array of integers
@@ -22,10 +23,11 @@ exercise.two = function(arr){
     //
     //   For an input arr = [9, 3, 4], the return value should be 4
     // ----------------------------------------
-    return 'Error: Question 02 not implemented';
+
+    return arr[arr.length - 1];
 };
 
-exercise.three = function(str){
+exercise.three = function (str) {
     // ----------------------------------------
     //   QUESTION 03
     //   The function takes in a str which is of type string
@@ -35,10 +37,21 @@ exercise.three = function(str){
     //   For an input of str = "apple", the return value should
     //   be "a_p_p_l_e"
     // ----------------------------------------
-    return 'Error: Question 03 not implemented';
+    //solution 1
+    /*var length=str.length;
+    var str1='';
+    for (var i=0; i<length; i++){
+        if(i===length-1){
+            str1+=str[i];
+        }else{
+            str1+=str[i]+'_';
+        }
+    }
+    return str1;*/
+    return str.split('').join('_');
 };
 
-exercise.four = function(arr){
+exercise.four = function (arr) {
     // ----------------------------------------
     //   QUESTION 04
     //   The function takes in arr which is an array of integers
@@ -47,10 +60,12 @@ exercise.four = function(arr){
     //
     //   For an input arr = [2, 4, 6], the return should be [4, 16, 36]
     // ----------------------------------------
-    return 'Error: Question 04 not implemented';
+    return arr.map(function (element) {
+        return element * element;
+    });
 };
 
-exercise.five = function(obj){
+exercise.five = function (obj) {
     // ----------------------------------------
     //   QUESTION 05
     //   The function takes in a parameter obj which is of type Object
@@ -62,10 +77,10 @@ exercise.five = function(obj){
     //   For an input obj = {'first_name': 'John', 'last_name': 'Doe'},
     //   the return value should be 'John Doe'
     // ----------------------------------------
-    return 'Error: Question 05 not implemented';
+    return obj.first_name + ' ' + obj.last_name;
 };
 
-exercise.six = function(arr){
+exercise.six = function (arr) {
     // ----------------------------------------
     //   QUESTION 06
     //   The function takes in arr which is an array of integers
@@ -73,10 +88,19 @@ exercise.six = function(arr){
     //
     //   For an input arr = [1, 4, 6, 9], the return value should be 2
     // ----------------------------------------
-    return 'Error: Question 06 not implemented';
+    //solution 1
+    /* var num=0;
+     return arr.reduce(function(previous, current){
+         if (current%2===0){
+             num+=1;
+         }
+         return num;
+     },0)*/
+    //solution2
+    return newArr = arr.filter(function (i) { return i % 2 === 0; }).length;
 };
 
-exercise.seven = function(n){
+exercise.seven = function (n) {
     // ----------------------------------------
     //   QUESTION 07
     //   The function takes in a single value n which is an integer
@@ -85,10 +109,23 @@ exercise.seven = function(n){
     //
     //   For an input n = 4, the return value would be [1, 0, 1, 0]
     // ----------------------------------------
-    return 'Error: Question 07 not implemented';
+    var arr = [];
+    //solution1
+    /*    for (var i = 0; i < n; i++) {
+            if (i % 2 === 0) {
+                arr.push(1);
+            } else {
+                arr.push(0);
+            }
+        }*/
+    //solution2
+    for (var i = 0; i < n; i++) {
+        arr.push(i % 2);
+    }
+    return arr;
 };
 
-exercise.eight = function(str){
+exercise.eight = function (str) {
     // ----------------------------------------
     //   QUESTION 08
     //   The function takes in str which is a string. This string
@@ -98,10 +135,12 @@ exercise.eight = function(str){
     //
     //   For str = '1234', return 10
     // ----------------------------------------
-    return 'Error: Question 08 not implemented';
+    str = str.split('');
+    return str.reduce(function (a, b) { return Number(a) + Number(b); }, 0);
+
 };
 
-exercise.nine = function(func){
+exercise.nine = function (func) {
     // ----------------------------------------
     //   QUESTION 09
     //   The function takes in a parameter func which itself is a function
@@ -111,10 +150,11 @@ exercise.nine = function(func){
     //
     //   For an obtained value of 5 on executing func, return 25
     // ----------------------------------------
-    return 'Error: Question 09 not implemented';
+    
+    return func()*func();
 };
 
-exercise.ten = function(){
+exercise.ten = function () {
     // ----------------------------------------
     //   QUESTION 10
     //   Return a function that is capable of accepting two
@@ -124,7 +164,9 @@ exercise.ten = function(){
     //   For this, the return value would be of the form
     //   function(a, b) { return /*  do something  */ }
     // ----------------------------------------
-    return 'Error: Question 10 not implemented';
+    return function(a,b){
+        return a*b;
+    }
 };
 
 module.exports = exercise;
