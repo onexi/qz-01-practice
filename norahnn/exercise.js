@@ -12,6 +12,7 @@ exercise.one = function(a, b){
     //   should look like {'sum': 5}
     // ----------------------------------------
     return {'sum':a+b};
+};
 
 exercise.two = function(arr){
     // ----------------------------------------
@@ -36,10 +37,10 @@ exercise.three = function(str){
     // ----------------------------------------
     var output=""
     for(var i=0;i<str.length-1;i++){
-        output.push(str[i]+"-");
-    }
+        output=output+str[i]+"-";
+    };
     
-    return concat(ouput,str[str.length-1]);
+    return output+str[str.length-1];
 };
 
 exercise.four = function(arr){
@@ -139,6 +140,7 @@ exercise.nine = function(func){
     // ----------------------------------------
     var temp=func();
     return temp*temp;
+};
 
 exercise.ten = function(){
     // ----------------------------------------
