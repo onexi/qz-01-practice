@@ -35,12 +35,11 @@ exercise.three = function(str){
     //   For an input of str = "apple", the return value should
     //   be "a_p_p_l_e"
     // ----------------------------------------
-    var output=""
-    for(var i=0;i<str.length-1;i++){
-        output=output+str[i]+"-";
-    };
-    
-    return output+str[str.length-1];
+    // var output=""
+    // for(var i=0;i<str.length-1;i++){
+    //     output=output+str[i]+"-";
+    return str.split("").join("_");
+
 };
 
 exercise.four = function(arr){
